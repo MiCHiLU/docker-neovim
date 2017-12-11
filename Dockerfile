@@ -9,11 +9,11 @@ RUN apk --no-cache --update add \
   libvterm \
   unibilium \
   #
-  perl \
   cmake \
+  g++ \
   gcc \
   git \
-  g++ \
+  perl \
   ;
 
 ARG \
@@ -23,20 +23,20 @@ RUN apk --no-cache --update add --virtual build-deps \
   autoconf \
   automake \
   cmake \
-  musl-dev \
   g++ \
-  git \
   gcc \
+  git \
   libtermkey-dev \
   libtool \
-  libvterm-dev \
-  unibilium-dev \
-  ncurses-dev \
   libuv \
+  libvterm-dev \
   luarocks \
   m4 \
-  perl \
   make \
+  musl-dev \
+  ncurses-dev \
+  perl \
+  unibilium-dev \
   && git clone --branch="${neovim}" --depth=1 https://github.com/neovim/neovim.git src \
   && (cd src \
     && make \
