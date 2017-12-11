@@ -18,19 +18,11 @@ RUN apk --no-cache --update add --virtual build-deps \
   automake \
   cmake \
   g++ \
-  gcc \
   git \
   libtermkey-dev \
-  libtool \
-  libuv \
   libvterm-dev \
   luarocks \
-  m4 \
   make \
-  musl-dev \
-  ncurses-dev \
-  perl \
-  unibilium-dev \
   && git clone --branch="${neovim}" --depth=1 https://github.com/neovim/neovim.git src \
   && (cd src \
     && make \
