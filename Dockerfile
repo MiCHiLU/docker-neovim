@@ -6,6 +6,7 @@ ENV \
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
   && apk --no-cache --update add \
   libtermkey \
+  libvterm \
   #
   perl \
   cmake \
@@ -25,6 +26,7 @@ RUN neovim="v0.2.2" \
   gcc \
   libtermkey-dev \
   libtool \
+  libvterm-dev \
   ncurses-dev \
   libuv \
   #linux-headers \
@@ -35,13 +37,6 @@ RUN neovim="v0.2.2" \
   perl \
   make \
   #unzip \
-  ##
-  && git clone --branch=master --depth=1 https://github.com/neovim/libvterm.git src \
-  && (cd src \
-    && make \
-    && make install \
-  ) \
-  && rm -rf src \
   ##
   && git clone --branch=master --depth=1 https://github.com/neovim/unibilium.git src \
   && (cd src \
