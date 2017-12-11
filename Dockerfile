@@ -3,8 +3,7 @@ FROM alpine:edge
 ENV \
   CMAKE_EXTRA_FLAGS="-DENABLE_JEMALLOC=OFF"
 
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
-  && apk --no-cache --update add \
+RUN apk --no-cache --update add \
   libgcc \
   libtermkey \
   libvterm \
