@@ -1,8 +1,5 @@
 FROM alpine:edge
 
-ENV \
-  CMAKE_EXTRA_FLAGS="-DENABLE_JEMALLOC=OFF"
-
 RUN apk --no-cache --update add \
   libgcc \
   libtermkey \
@@ -15,6 +12,9 @@ RUN apk --no-cache --update add \
   git \
   perl \
   ;
+
+ENV \
+  CMAKE_EXTRA_FLAGS="-DENABLE_JEMALLOC=OFF"
 
 ARG \
   neovim=v0.2.2
