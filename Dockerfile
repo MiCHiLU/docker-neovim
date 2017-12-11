@@ -7,6 +7,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
   && apk --no-cache --update add \
   libtermkey \
   libvterm \
+  unibilium \
   #
   perl \
   cmake \
@@ -27,6 +28,7 @@ RUN neovim="v0.2.2" \
   libtermkey-dev \
   libtool \
   libvterm-dev \
+  unibilium-dev \
   ncurses-dev \
   libuv \
   #linux-headers \
@@ -37,13 +39,6 @@ RUN neovim="v0.2.2" \
   perl \
   make \
   #unzip \
-  ##
-  && git clone --branch=master --depth=1 https://github.com/neovim/unibilium.git src \
-  && (cd src \
-    && make \
-    && make install \
-  ) \
-  && rm -rf src \
   ##
   && git clone --branch="${neovim}" --depth=1 https://github.com/neovim/neovim.git src \
   && (cd src \
