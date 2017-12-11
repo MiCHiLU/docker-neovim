@@ -46,3 +46,5 @@ RUN apk --no-cache --update add --virtual build-deps \
   && apk del build-deps
 
 ENTRYPOINT /usr/local/bin/nvim
+
+WORKDIR /root
