@@ -17,8 +17,10 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
   g++ \
   ;
 
-RUN neovim="v0.2.2" \
-  ; apk --no-cache --update add --virtual build-deps \
+ARG \
+  neovim=v0.2.2
+
+RUN apk --no-cache --update add --virtual build-deps \
   autoconf \
   automake \
   cmake \
