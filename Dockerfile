@@ -5,6 +5,7 @@ ENV \
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
   && apk --no-cache --update add \
+  libgcc \
   libtermkey \
   libvterm \
   unibilium \
