@@ -5,12 +5,6 @@ RUN apk --no-cache --update add \
   libtermkey \
   libvterm \
   unibilium \
-  #
-  cmake \
-  g++ \
-  gcc \
-  git \
-  perl \
   ;
 
 ENV \
